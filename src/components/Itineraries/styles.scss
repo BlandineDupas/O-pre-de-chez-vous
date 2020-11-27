@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+.itineraries {
+  margin: auto;
+
+  &__content {
+    &__side {
+      background-color: vars.$color-primary-middle;
+      border: vars.$border;
+      border-radius: vars.$radius;
+      padding: vars.$gutter;
+      margin: vars.$gutter auto;
+      text-align: left;
+      min-height: 300px;
+
+      &__error {
+        color: vars.$color-light;
+        margin-top: vars.$gutter;
+        background-color: vars.$color-lavander;
+        padding: vars.$gutter;
+        border-radius: vars.$radius;
+      }
+      
+      &__title {
+        font-weight: bold;
+        color: vars.$color-grey;
+      }
+    }
+
+    &__map {
+      border: vars.$border;
+      border-radius: vars.$radius;
+      overflow: hidden;
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .itineraries {
+    &__content {
+      display: flex;
+      align-items: flex-start;
+      
+      &__side {
+        min-width: fit-content;
+        flex: 50%;
+        margin: auto;
+        margin-right: vars.$gutter;
+        height: 450px;
+        overflow-y: scroll;
+      }
+
+      &__map {
+        min-width: 300px;
+        flex: 50%;
+        height: 450px;
+      }
+    }
+  }  
+}

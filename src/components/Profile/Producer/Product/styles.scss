@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+.product {
+    border: vars.$border;
+    border-radius: vars.$radius;
+    margin: vars.$gutter;
+    padding: vars.$gutter;
+    flex: 30% 0;
+    background-color: vars.$color-light-trans;
+    color: vars.$color-light;
+    &__title {
+        color: vars.$color-green;
+    }
+    &__price {
+        color: vars.$color-green;
+    }
+    &__img {
+        width: 100px;
+    }
+}

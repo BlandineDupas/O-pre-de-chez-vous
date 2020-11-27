@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+
+.register__fieldset {
+  max-width: 550px;
+  padding: vars.$gutter;
+  margin: vars.$gutter / 2 auto;
+  border-radius: vars.$radius;
+  background-color: vars.$color-primary-middle;
+  display: flex;
+  align-items: center;
+  border: vars.$border;
+
+  &__label {
+    flex: 50%;
+    margin-right: vars.$gutter;
+  }
+
+  &__input {
+    flex: 50%;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: vars.$color-green;
+    font-weight: bold;
+  }
+}

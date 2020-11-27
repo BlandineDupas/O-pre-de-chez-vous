@@ -1,0 +1,51 @@
+@use 'src/styles/vars';
+.searchForm {
+    background-color: vars.$color-light-trans;
+    border-radius: vars.$radius;
+    border: vars.$border;
+    padding: vars.$gutter;
+    margin: vars.$gutter auto;
+    text-align: center;
+    color: vars.$color-green;
+    font-size: 1.3rem;
+    &--separator {
+        margin: vars.$gutter / 2 auto;
+    }
+    &__input {
+        display: block;
+        margin: 0 auto;
+        width: 210px;
+        border-radius: vars.$radius vars.$radius 0 0;
+        padding: vars.$gutter;
+        border: none;
+        background-color: vars.$color-light;
+        color: vars.$color-grey;
+        &::placeholder {
+            color: vars.$color-green;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .searchForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--separator {
+            margin: auto vars.$gutter;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .searchForm {
+        &--separator {
+            margin: auto vars.$gutter;
+        }
+        &__input {
+            display: inline;
+            border-radius: vars.$radius 0 0 vars.$radius;
+            width: 250px;
+        }
+    }
+}

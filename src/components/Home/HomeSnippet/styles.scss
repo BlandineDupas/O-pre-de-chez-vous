@@ -1,0 +1,28 @@
+@use 'src/styles/vars';
+
+.homeSnippet {
+  background-color: vars.$color-primary-middle;
+  padding: vars.$gutter * 1.5;
+  border-radius: vars.$radius;
+  margin: vars.$gutter auto;
+  min-width: 100%;
+  max-width: 1000px;
+  border: vars.$border;
+
+  &__title {
+    font-weight: bold;
+    color: vars.$color-grey;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  &__viewMore {
+    display: block;
+    text-align: right;
+    color: vars.$color-green;
+  }
+
+  &__viewMore:hover {
+    text-decoration: underline;
+  }
+}

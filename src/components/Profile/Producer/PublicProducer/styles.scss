@@ -1,0 +1,77 @@
+@use 'src/styles/vars';
+
+.producer-public-profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__info {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 50%;
+
+    &__picture {
+      width: 100%;
+      border-radius: vars.$radius;
+      border: vars.$border;
+    }
+
+    &__names {
+      font-size: 1.1rem;
+      margin: auto vars.$gutter;
+      color: vars.$color-light;
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    text-decoration: underline;
+
+    &:hover {
+      color: vars.$color-lavander;
+    }
+  }
+
+  &__map {
+    flex: 50%;
+    border-radius: vars.$radius;
+    border: vars.$border;
+    overflow: hidden;
+    min-height: 300px;
+  }
+
+  &__subtitle {
+    flex: 100%;
+    margin: vars.$gutter / 2; 
+    padding: vars.$gutter / 2;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.7rem;
+    color: vars.$color-grey;
+  }
+
+  &__products {
+    padding: vars.$gutter;
+    background-color: vars.$color-primary-middle;
+    border: 2px solid vars.$color-light;
+    margin: vars.$gutter auto;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;  
+    flex: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .producer-public-profile {
+    &__info {
+      &__picture {
+        width: 200px;
+      }
+    }
+  }
+}

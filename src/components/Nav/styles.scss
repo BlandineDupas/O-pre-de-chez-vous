@@ -1,0 +1,226 @@
+@use 'src/styles/vars';
+
+.nav {
+  background-color: vars.$color-light-trans;
+  padding: vars.$gutter / 2;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__toggler {
+    font-size: 1.5rem;
+    padding: vars.$gutter / 2;
+    position: relative;
+    left: 3rem;
+    cursor: pointer;
+    color: vars.$color-green;
+
+    &:hover {
+      color: vars.$color-green;
+    }
+  }
+
+  &__menu {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    background-color: vars.$color-light;
+    border: 3px solid vars.$color-primary;
+    border-top: none;
+    width: 90%;
+    margin: auto;
+
+    &__link {
+      display: block;
+      padding: vars.$gutter / 2;
+      border-top: 1px solid vars.$color-green;
+      color: vars.$color-green;
+      font-weight: bold;
+
+      &--active {
+        background-color: vars.$color-green-light;
+        color: vars.$color-grey;
+        font-style: italic;
+      }
+
+      &:hover {
+        color:vars.$color-grey;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__login {
+    max-width: 50%;
+    position: relative;
+
+    &__button {
+      margin: 0.2rem;
+      font-size: 0.8rem;
+    }
+
+
+    &__hi {
+      position: absolute;
+      bottom: -(vars.$gutter * 3);
+      right: vars.$gutter / 2;
+      color: vars.$color-light;
+      font-weight: bold;
+      width: fit-content;
+      font-size: 0.8rem;
+      background-color: vars.$color-green-light;
+      padding: vars.$gutter / 2;
+      
+      &--name {
+        text-transform: capitalize;
+      }
+    }
+
+    &__menu {
+      text-align: right;
+      color: vars.$color-green;
+      font-weight: bold;
+      padding: 0 vars.$gutter;
+      &__link {
+        display: block;
+
+        &--active {
+          color: vars.$color-grey;
+          font-style: italic;
+        }
+
+        &:hover {
+          color: vars.$color-grey;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+
+    &--fields {
+      width: 150px;
+    }
+
+    &__inputField {
+      padding: vars.$gutter / 3;
+      border: none;
+      background-color: vars.$color-light;
+      border-radius: vars.$radius 0 0 0;
+      width: 150px;
+      color: vars.$color-green;
+      text-align: center;
+
+      &::placeholder {
+        color: vars.$color-green;
+        text-align: center;
+      }
+
+      &:focus {
+        background-color: vars.$color-light-trans;
+      }
+    }
+
+    .button {
+      padding: vars.$gutter / 3;
+      border-radius: 0 vars.$radius vars.$radius 0;
+      border: solid 1px vars.$color-light;
+    }
+
+    &__selectField {
+      padding: vars.$gutter / 3;
+      border: solid 1px vars.$color-light;
+      border-right: none;
+      background-color: vars.$color-green;
+      color: vars.$color-light;
+      font-weight: bold;
+      border-radius: 0 0 0 vars.$radius;
+      width: 150px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding: vars.$gutter;
+
+    &__toggler {
+      display: none;
+    }
+    
+    &__main {
+      display: flex;
+      align-items: center;
+    }
+
+    &__menu {
+      display: block;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      &__link {
+        display: inline;
+        border: none;
+        margin-right: vars.$gutter;
+        font-size: 1.2rem;
+
+        &--active {
+          background-color: transparent;
+          color: vars.$color-grey;
+          font-style: italic;
+        }
+  
+        &:hover {
+          color:vars.$color-grey;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__login {
+      display: flex;
+      align-items: center;
+
+      &__button {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    &__search {
+      display: flex;
+
+      &--fields {
+        display: flex;
+        width: fit-content;
+      }
+
+      &__inputField {
+        border-radius: vars.$radius 0 0 vars.$radius;
+      }
+  
+      &__selectField {
+        border-radius: 0;
+        width: fit-content;
+      }
+
+      .button {
+        border-radius: 0 vars.$radius vars.$radius 0;
+      }
+    }
+  }
+}

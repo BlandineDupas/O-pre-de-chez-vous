@@ -1,0 +1,24 @@
+@use 'src/styles/vars';
+.one {
+    background-color: vars.$color-primary-middle;
+    border: vars.$border;
+    border-radius: vars.$radius;
+    padding: vars.$gutter;
+    margin: vars.$gutter;
+    &__img {
+        width: 100px;
+        border-radius: 50%;
+        border: vars.$border;
+    }
+    &__name {
+        font-weight: bold;
+        color: vars.$color-green;
+    }
+}
+
+@media (min-width: 768px) {
+    .one {
+        flex: 30%;
+        max-width: 30%;
+    }
+}

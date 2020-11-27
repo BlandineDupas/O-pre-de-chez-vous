@@ -1,0 +1,52 @@
+@use 'src/styles/vars';
+
+.itinerary-synopsis {
+  padding: vars.$gutter / 2;
+  background-color: vars.$color-light-trans;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: vars.$color-grey;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    border: 2px solid vars.$color-green;
+  }
+
+  &__destination {
+    text-transform: capitalize;
+    color: vars.$color-green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 150px;
+    text-transform: capitalize;
+  }
+
+  &__author {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .itinerary-synopsis {
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 450px;
+    
+    &__author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 vars.$gutter;
+  
+      .author__pic {
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    }
+  }
+}

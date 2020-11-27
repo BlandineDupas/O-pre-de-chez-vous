@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+.registerForm {
+    margin: auto;
+    &__title {
+        display: block;
+        padding: vars.$gutter;
+        font-size: 2rem;
+        color: vars.$color-light;
+    }
+    &__redirection {
+        text-decoration: underline;
+        color: vars.$color-light;
+        &:hover {
+            color: vars.$color-lavander;
+        }
+    }
+}
+
+.errors {
+    background-color: vars.$color-lavander-light;
+    color: vars.$color-green;
+    font-weight: bold;
+    margin: auto;
+    padding: vars.$gutter;
+    border: vars.$border;
+    border-radius: vars.$radius;
+    text-align: left;
+    padding-left: vars.$gutter * 2;
+    &__item {
+        list-style: square;
+    }
+}

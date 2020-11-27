@@ -1,0 +1,55 @@
+ @use 'src/styles/vars';
+
+
+.message-chat {
+  width: 80%;
+  color: #285528;
+  margin-bottom: vars.$gutter * 2;
+  text-align: left;
+  border: none;
+  margin: 0.5rem auto;
+  padding: 0.5rem auto;
+  
+
+  &__author {
+    color: rgb(232, 238, 232);
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: vars.$gutter / 2;
+    margin-top: vars.$gutter * 1.5 ;
+    margin-left: vars.$gutter * 1.5;
+  }
+  &__content {
+    background-color:#285528dd;
+    color: rgb(232, 238, 232);
+    display: inline-block;
+    text-align: left;
+    padding: vars.$gutter * 1.5 vars.$gutter;
+    border-radius: 50px;
+    position: relative;
+    font-size: 1.2em;
+    min-width: 200px;
+
+  }
+  &--is-mine {
+    text-align: right;
+    // margin-right: vars.$gutter * 2;
+  }
+  &--is-not-mine {
+    // margin-left:  vars.$gutter * 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .message-chat {
+    max-width: 400px;
+    
+    &--is-mine {
+      text-align: right;
+      margin-right: vars.$gutter * 2;
+    }
+    &--is-not-mine {
+      margin-left:  vars.$gutter * 2;
+    }
+  }
+}

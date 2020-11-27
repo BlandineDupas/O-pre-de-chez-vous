@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+
+  .message{
+    background-color:vars.$color-primary-middle;
+    border: 2px solid vars.$color-light;
+    border-radius: vars.$radius;
+    text-align: center;
+    padding: vars.$gutter ;
+    margin: vars.$gutter ;
+
+    &__User {
+      font-weight: bold;
+      font-size: vars.$gutter * 1.3 ;
+    }
+  
+  }
+
+  .message:hover {
+    border: 3px solid vars.$color-lavander;
+    font-weight: bold;
+ 
+    }
+
+@media (min-width: 768px) {
+  .message {
+    width: 45%;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+@media (min-width: 768px) {
+  .us {
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;  
+    }
+  }
+}

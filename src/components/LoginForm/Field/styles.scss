@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+.loginForm__field {
+    margin: vars.$gutter / 2 auto;
+    border-radius: vars.$radius;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .field-input {
+        padding: vars.$gutter / 2;
+        border-radius: vars.$radius;
+        margin: 0.2rem auto;
+        width: 250px;
+        background-color: vars.$color-light;
+        border: none;
+        color: vars.$color-grey;
+        &:focus {
+            box-shadow: 0 0 5px 1px vars.$color-lavander;
+        }
+    }
+    .field-label {
+        flex: 100%;
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .loginForm__field {
+        .field-input {
+            // width: 30%;
+        }
+    }
+}

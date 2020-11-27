@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+.user-public-profile {
+    &__info {
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 50%;
+        &__picture {
+            width: 100%;
+            border-radius: vars.$radius;
+            border: vars.$border;
+        }
+        &__names {
+            font-size: 1.1rem;
+            margin: auto vars.$gutter;
+            color: vars.$color-light;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .user-public-profile {
+        &__info {
+            &__picture {
+                width: 200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+.description {
+    background-color: vars.$color-primary-middle;
+    border: 2px solid vars.$color-light;
+    border-radius: vars.$radius;
+    margin: vars.$gutter auto;
+    padding: vars.$gutter;
+    flex: 100%;
+    &__title {
+        flex: 100%;
+        margin: vars.$gutter / 2;
+        padding: vars.$gutter / 2;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1.7rem;
+        color: vars.$color-grey;
+    }
+    &__content {
+        color: vars.$color-grey;
+        text-align: left;
+        padding: vars.$gutter;
+        font-size: vars.$gutter * 1.2;
+        margin: vars.$gutter / 2;
+    }
+}

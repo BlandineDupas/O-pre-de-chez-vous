@@ -1,0 +1,41 @@
+@use 'src/styles/vars';
+.register__field {
+    margin: vars.$gutter / 2 auto;
+    border-radius: vars.$radius;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: vars.$color-grey;
+    &__label {
+        flex: 100%;
+    }
+    &__input {
+        flex: 50%;
+    }
+    .inputField {
+        padding: vars.$gutter / 2;
+        border-radius: vars.$radius;
+        margin: 0.2rem 0;
+        width: 250px;
+        background-color: vars.$color-light;
+        border: none;
+        color: vars.$color-grey;
+        &:focus {
+            box-shadow: vars.$shadow-purple;
+        }
+        &::placeholder {
+            color: vars.$color-grey;
+            ;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .register__field {
+        flex-wrap: nowrap;
+        &__label {
+            text-align: right;
+            margin-right: vars.$gutter / 2;
+        }
+    }
+}

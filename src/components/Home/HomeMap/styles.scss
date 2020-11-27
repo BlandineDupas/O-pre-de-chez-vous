@@ -1,0 +1,22 @@
+@use 'src/styles/vars';
+
+.homeMap {
+  border-radius: vars.$radius;
+  border: vars.$border;
+  background-color: vars.$color-primary-middle;
+  overflow: hidden;
+
+  &__img {
+    display: block;
+    width: 100%;
+    padding: vars.$gutter * 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .homeMap {
+    margin-right: vars.$gutter;
+    margin-top: vars.$gutter;
+  }
+}
+

@@ -1,0 +1,50 @@
+@use 'src/styles/vars';
+.user-private-profile {
+    display: flex;
+    flex-wrap: wrap;
+    &__info {
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 50%;
+        &__picture {
+            width: 100%;
+            border-radius: vars.$radius;
+            border: vars.$border;
+        }
+        &__names {
+            font-size: 1.1rem;
+            margin: auto vars.$gutter;
+            text-align: left;
+            color: vars.$color-light;
+        }
+    }
+    &__buttons {
+        margin: auto;
+        .button {
+            margin: vars.$gutter / 2 auto;
+            display: block;
+            &--warning:hover {
+                background-color: red;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .user-private-profile {
+        &__info {
+            &__picture {
+                width: 200px;
+            }
+        }
+        &__buttons {
+            .button {
+                margin: vars.$gutter / 2;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+.footer {
+    text-align: center;
+    background-color: vars.$color-light-trans;
+    padding: vars.$gutter / 2;
+    &__link {
+        display: block;
+        margin: 0 vars.$gutter / 2;
+        font-size: 0.9rem;
+        color: vars.$color-green;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+            color: vars.$color-light;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: vars.$gutter;
+        &__link {
+            display: inline;
+            font-size: 1rem;
+        }
+    }
+}

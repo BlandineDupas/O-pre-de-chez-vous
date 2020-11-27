@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+.mainPage {
+    background-color: vars.$color-primary-trans;
+    padding: vars.$gutter;
+    margin: vars.$gutter auto;
+    border-radius: vars.$radius;
+    max-width: 95%;
+    text-align: center;
+    &__title {
+        display: block;
+        padding: vars.$gutter;
+        font-size: 2.3rem;
+        line-height: 2rem;
+        color: vars.$color-light;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 768px) {
+    .mainPage {
+        min-width: fit-content;
+        max-width: 90%;
+        &__title {
+          font-size: 3rem;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use 'src/styles/vars';
+
+.form {
+  background-color: vars.$color-light-trans;
+  text-align: center;
+  padding: vars.$gutter;
+  border-top: vars.$border;
+  
+
+&__input {
+  
+  background-color: vars.$color-light;
+  border-radius: vars.$radius;
+  padding: .8rem;
+  margin-top: .5rem;
+  text-align: left;
+  border: none;
+}
+
+&__submit {
+  &__button {
+  text-align: left;
+  padding: .8rem;
+  }
+}
+    
+}
+
+@media (min-width: 768px) { 
+  .form {
+    &__input {
+      padding-right: vars.$gutter * 20;
+    }
+    
+
+  }
+}
+
+
+

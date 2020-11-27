@@ -1,0 +1,21 @@
+@use 'src/styles/vars';
+.legalMentions {
+  &__subtitle{
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 30%;
+    background-color: vars.$color-primary-middle;
+    border: 2px solid vars.$color-light;
+    border-radius: vars.$radius;
+    margin: vars.$gutter *1.5 auto;
+    padding: vars.$gutter ;
+  }
+
+  &__text {
+    margin: vars.$gutter ;
+    padding: vars.$gutter ;
+    text-align: justify;
+  }
+}

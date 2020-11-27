@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+.button {
+    border: none;
+    padding: vars.$gutter;
+    border-radius: vars.$radius;
+    // background-color: vars.$color-alt-dark;
+    background-color: vars.$color-green;
+    color: white;
+    font-weight: bold;
+    &:hover {
+        background-color: vars.$color-lavander;
+    }
+    &--submit {
+        border-radius: 0 0 vars.$radius vars.$radius;
+        width: 210px;
+    }
+}
+
+@media (min-width: 768px) {
+    //
+}
+
+@media (min-width: 1024px) {
+    .button {
+        &--submit {
+            border-radius: 0 vars.$radius vars.$radius 0;
+            width: initial;
+        }
+    }
+}

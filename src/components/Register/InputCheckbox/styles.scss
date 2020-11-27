@@ -1,0 +1,10 @@
+@use 'src/styles/vars';
+.checkboxField {
+  display: block;
+  background-color: vars.$color-primary-middle;  
+  border-radius: vars.$radius;
+  margin: vars.$gutter / 2 auto;
+  padding: vars.$gutter;
+  border: vars.$border;
+  width: fit-content;
+}

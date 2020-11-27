@@ -1,0 +1,8 @@
+@use 'src/styles/vars';
+
+.chatroom{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;  
+}

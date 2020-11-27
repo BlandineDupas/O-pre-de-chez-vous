@@ -1,0 +1,23 @@
+@use 'src/styles/vars';
+
+.loginForm {
+  margin: auto;
+  padding: vars.$gutter * 2;
+  background-color: vars.$color-primary-middle;
+  border-radius: vars.$radius;
+  color:vars.$color-light;
+  text-align: center;
+  border: vars.$border;
+  max-width: fit-content;
+
+  &__redirection {
+    margin: vars.$gutter auto;
+    padding: auto;
+    color: vars.$color-light;
+    text-decoration: underline;
+    font-size: 0.8em;
+    &:hover {
+      color:vars.$color-lavander;
+    }
+  }
+}
